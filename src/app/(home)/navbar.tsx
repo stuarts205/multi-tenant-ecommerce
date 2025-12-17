@@ -5,7 +5,6 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
-import { Nav } from "react-day-picker";
 import { NavbarSidebar } from "./navbar-sidebar";
 import { MenuIcon } from "lucide-react";
 
