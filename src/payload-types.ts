@@ -6,6 +6,8 @@
  * and re-run `payload generate:types` to regenerate this file.
  */
 
+import { JSX } from "react";
+
 export interface Config {
   auth: {
     users: UserAuthOperations;
@@ -84,6 +86,17 @@ export interface Media {
 export interface Category {
   id: string;
   name: string;
+  slug: string;
+  color?: string | null;
+  parent?: (string | null) | Category;
+  subcategories?: {
+    map(arg0: (subcategory: Category) => JSX.Element): import("react").ReactNode;
+    docs?: (string | Category)[];
+    hasNextPage?: boolean;
+    totalDocs?: number;
+  };
+  updatedAt: string;
+  createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
